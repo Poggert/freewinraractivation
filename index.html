@@ -2,64 +2,111 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>How to activate winrar for free</title>
+    <title>How to activate WinRAR for free</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f7f7f7;
+        background-color: #333;
+        color: #fff;
       }
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 40px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #444;
+        border: 10px solid #222;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
       }
       h1 {
-        font-size: 32px;
+        font-size: 48px;
         margin-bottom: 20px;
         text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
       p {
-        font-size: 18px;
+        font-size: 24px;
         line-height: 1.5;
         margin-bottom: 20px;
       }
       ol {
         margin: 0 0 20px 0;
-        padding: 0 0 0 20px;
-        list-style-type: decimal;
+        padding: 0 0 0 40px;
+        list-style-type: none;
+        counter-reset: step;
       }
       ol li {
         margin-bottom: 10px;
+        position: relative;
+      }
+      ol li:before {
+        content: counter(step);
+        counter-increment: step;
+        background: #666;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        left: -40px;
+        top: 0;
       }
       .button {
         display: inline-block;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 20px 40px;
+        border-radius: 10px;
         text-decoration: none;
-        margin-top: 20px;
+        margin-top: 40px;
         transition: background-color 0.3s ease;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
       }
       .button:hover {
-        background-color: #0062cc;
+        background-color: #45a049;
+      }
+      #thank-you {
+        display: none;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 40px;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+      #thank-you.show {
+        display: block;
+        opacity: 1;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>How to activate winrar for free</h1>
-      <p>Follow these steps to activate Winrar for free:</p>
+      <h1>How to activate WinRAR for free</h1>
+      <p>Follow these steps to activate WinRAR for free:</p>
       <ol>
-        <li>Download the rarkey.rar file by clicking on the download button below.</li>
-        <li>On the download site, press download once again</li>
-        <li>Wait until it's downloaded</li>
-        <li>Open it with Winrar</li>
+        <li>Download the <strong>rarkey.rar</strong> file by clicking on the download button below.</li>
+        <li>On the download site, press download once again.</li>
+        <li>Wait until it's downloaded.</li>
+        <li>Open it with WinRAR.</li>
       </ol>
       <p>I hope this is helpful!</p>
-      <a class="button" href="https://github.com/Poggert/winrarfreelicense/blob/main/rarkey.rar">Download</a>
+      <a id="downloadButton" class="button">Download</a>
+      <div id="thank-you">&#x1F493; THANK YOU! &#x1F493;</div>
     </div>
+
+    <script>
+      document.getElementById("downloadButton").addEventListener("click", function() {
+        var container = document.querySelector('.container');
+        var thankYou = document.getElementById('thank-you');
+        container.style.opacity = 0;
+        setTimeout(function() {
+          container.style.display = 'none';
+          thankYou.classList.add('show');
+        }, 2000); // 2000 milliseconds = 2 seconds
+      });
+    </script>
   </body>
 </html>
