@@ -6,15 +6,19 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #333;
+        background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 400% 400%;
+        animation: rainbowBackground 10s infinite linear;
         color: #fff;
+        margin: 0;
+        padding: 0;
       }
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 40px;
-        background-color: #444;
-        border: 10px solid #222;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 10px solid rgba(0, 0, 0, 0.4);
         border-radius: 20px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
       }
@@ -53,9 +57,12 @@
         left: -40px;
         top: 0;
       }
-      .button-container {
+      .download-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
         text-align: center;
-        margin-top: 40px;
+        margin-bottom: 20px;
       }
       .button {
         background-color: #4CAF50; /* Green */
@@ -70,20 +77,35 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
+        background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 500% 500%;
+        animation: rainbow 10s infinite linear;
       }
       .button:before {
-        content: "Download";
+        content: attr(data-text);
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
+        transition: opacity 0.5s ease-in-out;
       }
       .button:hover {
-        background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-        background-size: 500% 500%;
-        color: transparent;
-        animation: rainbow 5s infinite;
+        background: none;
+      }
+      .button:hover:before {
+        opacity: 0;
+      }
+      @keyframes rainbowBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
       @keyframes rainbow {
         0% {
@@ -95,10 +117,6 @@
         100% {
           background-position: 0% 50%;
         }
-      }
-      .button:hover:before {
-        content: "THANK YOU!";
-        color: white;
       }
     </style>
   </head>
@@ -113,8 +131,10 @@
         <li>Open it with WinRAR.</li>
       </ol>
       <p>I hope this is helpful!</p>
-      <div class="button-container">
-        <a id="downloadButton" class="button" href="https://github.com/Poggert/winrarfreelicense/blob/main/rarkey.rar"></a>
+      <div class="download-box">
+        <p>Download at</p>
+        <a id="downloadGitHub" class="button" data-text="GitHub" href="https://github.com/Poggert/winrarfreelicense/blob/main/rarkey.rar"></a>
+        <a id="downloadMEGA" class="button" data-text="MEGA" href="https://mega.nz/file/wR1mQTQa#pKSM871OzCrG2CHOox-H2H_scuslf2NMbO6NykF9QfY"></a>
       </div>
     </div>
   </body>
