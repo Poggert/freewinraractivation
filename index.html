@@ -1,141 +1,187 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>How to activate WinRAR for free</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-        background-size: 400% 400%;
-        animation: rainbowBackground 10s infinite linear;
-        color: #fff;
-        margin: 0;
-        padding: 0;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to activate WinRAR for free</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400% 400%;
+      animation: rainbowBackground 10s infinite linear;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s ease;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 10px solid rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.5s ease;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    p {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    ol {
+      margin: 0 0 20px 0;
+      padding: 0 0 0 40px;
+      list-style-type: none;
+      counter-reset: step;
+    }
+    ol li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    ol li:before {
+      content: counter(step);
+      counter-increment: step;
+      background: #666;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      left: -40px;
+      top: 0;
+    }
+    .download-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      padding: 25px 60px; /* Increased padding */
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      font-size: 24px;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 500% 500%;
+      animation: rainbow 10s infinite linear;
+    }
+    .button:before {
+      content: attr(data-text);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .button:hover {
+      background: none;
+    }
+    .button:hover:before {
+      opacity: 0;
+    }
+    @keyframes rainbowBackground {
+      0% {
+        background-position: 0% 50%;
       }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border: 10px solid rgba(0, 0, 0, 0.4);
-        border-radius: 20px;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+      50% {
+        background-position: 100% 50%;
       }
-      h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      100% {
+        background-position: 0% 50%;
       }
-      p {
-        font-size: 24px;
-        line-height: 1.5;
-        margin-bottom: 20px;
+    }
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
       }
-      ol {
-        margin: 0 0 20px 0;
-        padding: 0 0 0 40px;
-        list-style-type: none;
-        counter-reset: step;
+      50% {
+        background-position: 100% 50%;
       }
-      ol li {
-        margin-bottom: 10px;
-        position: relative;
+      100% {
+        background-position: 0% 50%;
       }
-      ol li:before {
-        content: counter(step);
-        counter-increment: step;
-        background: #666;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        display: inline-block;
-        position: absolute;
-        left: -40px;
-        top: 0;
-      }
-      .download-box {
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .button {
-        background-color: #4CAF50; /* Green */
-        color: white;
-        padding: 25px 60px; /* Increased padding */
-        border-radius: 10px;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-        cursor: pointer;
-        font-size: 24px;
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-        background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-        background-size: 500% 500%;
-        animation: rainbow 10s infinite linear;
-      }
-      .button:before {
-        content: attr(data-text);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        transition: opacity 0.5s ease-in-out;
-      }
-      .button:hover {
-        background: none;
-      }
-      .button:hover:before {
-        opacity: 0;
-      }
-      @keyframes rainbowBackground {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      @keyframes rainbow {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>How to activate WinRAR for free</h1>
-      <p>Follow these steps to activate WinRAR for free:</p>
-      <ol>
-        <li>Download the <strong>rarkey.rar</strong> file by clicking on the download button below.</li>
-        <li>On the download site, press download once again.</li>
-        <li>Wait until it's downloaded.</li>
-        <li>Open it with WinRAR.</li>
-      </ol>
-      <p>I hope this is helpful!</p>
-      <div class="download-box">
-        <p>Download at</p>
-        <a id="downloadGitHub" class="button" data-text="GitHub" href="https://github.com/Poggert/winrarfreelicense/blob/main/rarkey.rar"></a>
-        <a id="downloadMEGA" class="button" data-text="MEGA" href="https://mega.nz/file/wR1mQTQa#pKSM871OzCrG2CHOox-H2H_scuslf2NMbO6NykF9QfY"></a>
+    }
+    .update-log {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .update-log h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .update-log ul {
+      padding-left: 20px;
+    }
+    .update-log ul li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>How to activate WinRAR for free</h1>
+    <p>Follow these steps to activate WinRAR for free:</p>
+    <ol>
+      <li>Download the <strong>rarkey.rar</strong> file by clicking on the download button below.</li>
+      <li>On the download site, press download once again.</li>
+      <li>Wait until it's downloaded.</li>
+      <li>Open it with WinRAR.</li>
+    </ol>
+    <p>I hope this is helpful!</p>
+    <div class="download-box">
+      <p>Download at</p>
+      <a id="downloadGitHub" class="button" data-text="GitHub" href="https://github.com/Poggert/winrarfreelicense/blob/main/rarkey.rar"></a>
+      <a id="downloadMEGA" class="button" data-text="MEGA" href="https://mega.nz/file/wR1mQTQa#pKSM871OzCrG2CHOox-H2H_scuslf2NMbO6NykF9QfY"></a>
+      <a id="downloadMediaFire" class="button" data-text="MediaFire" href="https://www.mediafire.com/file/0ql2yoevztil144/rarkey.rar/file"></a>
+    </div>
+    <div class="update-log-container">
+      <button class="button" onclick="toggleUpdateLog()">Open Website Update Log</button>
+      <div class="update-log" id="updateLog">
+        <h2>Website Update Log</h2>
+        <ul>
+          <li>Update 1 (02/19/2024)</li>
+          <ul>
+            <li>Updated website design</li>
+            <li>Added 3 different download links at different platforms (GitHub, MEGA, MediaFire)</li>
+            <li>Added Update Logs</li>
+          </ul>
+        </ul>
       </div>
     </div>
-  </body>
+  </div>
+
+  <script>
+    function toggleUpdateLog() {
+      var updateLog = document.getElementById("updateLog");
+      if (updateLog.style.display === "none") {
+        updateLog.style.display = "block";
+      } else {
+        updateLog.style.display = "none";
+      }
+    }
+  </script>
+</body>
 </html>
